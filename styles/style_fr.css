@@ -1,0 +1,161 @@
+* {
+  color: #6a5550;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  scroll-behavior: smooth;
+}
+
+/* Main structure */
+
+.hidden-web {
+  display: none;
+}
+
+header {
+  background: no-repeat center fixed url("/assets/TRISTAN_BOUCANSAUD.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(odd) {
+  background-color: #f2e9e4;
+}
+
+section:nth-child(even) {
+  /* background-color: #f2f8dd; */
+  background-color: white;
+}
+
+section {
+  padding: 30px 15%;
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+/* Texts and titles */
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 65px;
+  font-weight: 700;
+  width: fit-content;
+  text-shadow: #6a5550 3px 3px 2px;
+}
+
+h2 {
+  text-align: center;
+  color: #77ab5f;
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+h3 {
+  text-align: center;
+  color: #77ab5f;
+  font-size: 28px;
+}
+
+strong {
+  font-weight: 700;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-header {
+  position: absolute;
+  bottom: 65vh;
+  padding-bottom: 3vh;
+  border-bottom: white 1px solid;
+  box-shadow: 0 4px 2px -2px #6a5550;
+  align-self: center;
+}
+
+.subtitle-header {
+  position: absolute;
+  bottom: 61vh;
+  align-self: center;
+  color: white;
+  font-weight: 200;
+  text-shadow: #6a5550 2px 2px 1px;
+  font-size: 1.5em;
+}
+
+.function {
+  font-size: 21px;
+  text-align: center;
+  color: #6a5550;
+}
+
+.description {
+  text-align: center;
+  font-size: 17px;
+}
+
+.sub-logos {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Blocs */
+
+hr {
+  border: 0;
+  border-top: solid 1px #eee;
+}
+
+.logo-sn {
+  z-index: 0;
+  width: 46px;
+  height: 46px;
+}
+
+#linkedin:hover {
+  content: url("/assets/linkedin_base.png");
+}
+
+#github:hover {
+  content: url("/assets/github_base.png");
+}
+
+.logos-sn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 25px 0 0 0;
+  padding: 0 20%;
+}
+
+.logo-keys {
+  z-index: 0;
+  width: 100%;
+  margin: auto;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.logos-keys {
+  padding: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5% 20%;
+}
