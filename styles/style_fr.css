@@ -143,6 +143,16 @@ ul.skills-list li:not(:last-child) {
   border-right: solid 1px var(--hr-color);
 }
 
+ul.languages-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+ul.languages-list li {
+  display: inline-block;
+}
+
 .title-header {
   position: absolute;
   bottom: 65vh;
