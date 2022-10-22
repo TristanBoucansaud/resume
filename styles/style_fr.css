@@ -7,6 +7,7 @@
   --link-hover: #8c271e;
   --secondary-bg: #f2e9e4;
   --hr-color: #6a555044;
+  --list-bg: #faf7f3;
 }
 
 * {
@@ -84,7 +85,7 @@ h3 {
 h4 {
   font-weight: 700;
   font-size: 18px;
-  margin: 10px 0;
+  margin: 30px 0 10px 0;
 }
 
 p {
@@ -94,6 +95,13 @@ p {
 strong {
   font-weight: 700;
   font-size: inherit;
+  color: inherit;
+}
+
+.hard-skill {
+  color: var(--text-heads);
+  margin: 16px 0 8px 16px;
+  font-style: italic;
 }
 
 a {
@@ -147,10 +155,70 @@ ul.languages-list {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 25px;
+  padding: 0;
+  margin: 0;
 }
 
 ul.languages-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 0;
+}
+
+ul.languages-list li:hover {
+  background-color: var(--list-bg);
+  transform: scale(1.01);
+  transition: all 0.2s;
+}
+
+.one-star:after {
+  background: url("/assets/star1.svg");
+}
+
+.two-star:after {
+  background: url("/assets/star2.svg");
+}
+
+.three-star:after {
+  background: url("/assets/star3.svg");
+}
+
+.one-star:after,
+.two-star:after,
+.three-star:after {
   display: inline-block;
+  height: 15px;
+  width: 45px;
+  margin-right: 5px;
+  content: "";
+  background-size: 100%;
+  background-position: center;
+  vertical-align: -11%;
+  margin-left: 8px;
+}
+
+.language-level {
+  color: var(--text-heads);
+}
+
+.caption-stars {
+  position: absolute;
+  width: fit-content;
+  font-style: italic;
+  font-size: 13px;
+  bottom: 25px;
+  right: 15%;
+}
+
+.caption-stars .one-star:after,
+.caption-stars .two-star:after,
+.caption-stars .three-star:after {
+  height: 13px;
+  width: 39px;
+  margin: 0;
 }
 
 .title-header {
@@ -233,6 +301,13 @@ hr {
   border-top: solid 1px var(--hr-color);
 }
 
+#languages {
+  padding-left: 28%;
+  padding-right: 28%;
+  padding-bottom: 70px;
+  position: relative;
+}
+
 .logo-sn {
   z-index: 0;
   width: 46px;
@@ -274,4 +349,10 @@ hr {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   column-gap: 20px;
+}
+
+.mini-logo-title {
+  height: 20px;
+  vertical-align: -11%;
+  margin-right: 8px;
 }
