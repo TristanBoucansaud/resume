@@ -9,6 +9,7 @@
   --tertiary-bg: #434242;
   --hr-color: #6a555044;
   --list-bg: #faf7f3;
+  --contact-text: #FFFFFF;
 }
 
 * {
@@ -52,8 +53,7 @@ section:nth-child(even) {
 
 section:last-of-type {
   background-color: var(--tertiary-bg);
-  padding-bottom: 300px;
-  color: white;
+  padding-bottom: 150px;
 }
 
 section {
@@ -301,7 +301,46 @@ ul.languages-list li:hover {
 }
 
 section:last-of-type h2 {
-  color: white;
+  color: var(--text-title);
+}
+
+section:last-of-type a {
+  color: var(--contact-text);
+  opacity: 0.6;
+}
+
+section:last-of-type a:hover {
+  opacity: 1;
+}
+
+.contacts .linkedin-contact:before {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  content: "";
+  background: url("/assets/linkedin-svg.svg");
+  background-size: 100%;
+  background-position: center;
+  background-color: #FFF;
+  border: solid #FFF 5px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.contacts .email-contact:before {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  content: "";
+  background: url("/assets/at.svg");
+  background-size: 100%;
+  background-position: center;
+  background-color: #FFF;
+  border: solid #FFF 5px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 /* Blocs */
@@ -465,4 +504,12 @@ hr.no-margin {
 .project:hover .project-image{
   opacity: 0.4;
   filter: blur(2px);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
 }
