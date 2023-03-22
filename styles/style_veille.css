@@ -1,0 +1,73 @@
+* {
+  font-family: "Arimo";
+  color: #634310;
+  font-size: 19px;
+}
+
+body {
+  background-image: url("../assets_veille/parchment.png");
+}
+
+strong,
+h1,
+h2,
+h3 {
+  color: #ac824c;
+  font-family: "DM Serif Display";
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  text-shadow: #634310 2px 2px, #634310 -2px -2px;
+}
+
+h2 {
+  padding-left: 5%;
+  font-size: 36px;
+}
+
+h3 {
+  padding-left: 1%;
+  font-size: 23px;
+}
+
+strong {
+  font-size: 21px;
+}
+
+.figures-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.figures-3 div p strong {
+  font-size: 80px;
+}
+
+.figures-3 div {
+  background-color: #634310;
+  border-radius: 50%;
+  padding: 50px 45px;
+}
+
+section {
+  margin: 0 10%;
+}
+
+.article-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10%;
+}
+
+.article-image:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+.article-image img {
+  width: 60%;
+}
