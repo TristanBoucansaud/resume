@@ -4,8 +4,35 @@
   font-size: 19px;
 }
 
+html,
+body {
+  height: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 body {
   background-image: url("../assets_veille/parchment.png");
+  position: relative;
+}
+
+p {
+  text-indent: 40px;
+  line-height: 1.4;
+}
+
+p strong {
+  line-height: 0.89;
+}
+
+a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #ac824c;
 }
 
 strong,
@@ -20,6 +47,7 @@ h1 {
   font-size: 60px;
   text-align: center;
   text-shadow: #634310 2px 2px, #634310 -2px -2px;
+  margin-bottom: 7%;
 }
 
 h2 {
@@ -36,6 +64,65 @@ strong {
   font-size: 21px;
 }
 
+nav {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #634310;
+  position: fixed;
+  top: 8%;
+  right: 2%;
+  border-radius: 16px;
+}
+
+nav div {
+  width: 100%;
+  border-bottom: #f1d8ba66 solid 1px;
+  background-color: #634310;
+  display: flex;
+}
+
+nav div a {
+  color: #ac824c;
+  font-size: 20px;
+  font-style: normal;
+  width: 100%;
+  text-align: center;
+  padding: 12px 8px;
+}
+
+nav div:nth-child(1) {
+  border-radius: 16px 16px 0 0;
+}
+
+nav div:nth-last-child(1) {
+  border-bottom: none;
+  border-radius: 0 0 16px 16px;
+}
+
+nav div:hover {
+  background-color: #ac824c;
+}
+
+nav div:hover a {
+  color: #634310;
+}
+
+article {
+  margin: 2% 0;
+}
+
+section {
+  margin: 0 15%;
+}
+
+footer {
+  padding: 1% 15% 5% 15%;
+  background-color: #0e2a47;
+}
+
 .figures-3 {
   display: flex;
   flex-direction: row;
@@ -44,30 +131,60 @@ strong {
 }
 
 .figures-3 div p strong {
-  font-size: 80px;
+  font-size: 70px;
+}
+
+.figures-3 div p {
+  font-size: 70px;
+  text-indent: 0;
 }
 
 .figures-3 div {
   background-color: #634310;
   border-radius: 50%;
-  padding: 50px 45px;
-}
-
-section {
-  margin: 0 10%;
+  padding: 0px 45px;
 }
 
 .article-image {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
   column-gap: 10%;
 }
 
-.article-image:nth-of-type(2n) {
+.article-image:nth-child(even of .article-image) {
   flex-direction: row-reverse;
+}
+
+img {
+  width: 100%;
 }
 
 .article-image img {
   width: 60%;
+}
+
+footer article.article-image img {
+  width: 30%;
+}
+
+footer article {
+  padding-bottom: 24px;
+  border-bottom: solid 1px #f1d8ba66;
+}
+
+footer article:nth-last-child(1) {
+  border-bottom: none;
+}
+
+footer article p,
+footer article a,
+footer a,
+footer article ul li {
+  color: #f1d8ba;
+}
+
+footer article ul li {
+  margin-top: 8px;
 }
